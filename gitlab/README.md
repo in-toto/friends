@@ -7,4 +7,5 @@ generate SLSA provenance in-toto attestations.
 
 ## References
 
+* https://docs.gitlab.com/ee/ci/runners/configure_runners.html#artifact-attestation
 * https://gitlab.com/gitlab-org/gitlab-runner/-/issues/28217
