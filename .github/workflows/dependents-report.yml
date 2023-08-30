@@ -1,0 +1,32 @@
+name: Generate top dependents report
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+jobs:
+  create-dependents-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - name: Set up Python
+        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'dependents-report/requirements.txt'
+      - name: Run script
+        run: python dependents-report/get-dependents.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create PR
+        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38
+        with:
+          commit-message: Regenerate dependents report
+          title: Regenerate dependents report
+          body: This PR updates the dependents report.
+          base: main
+          branch: actions-regenerate-dependents-report
+          delete-branch: true
+          signoff: true
+          author: GitHub <noreply@github.com>
+          committer: GitHub <noreply@github.com>
