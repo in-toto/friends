@@ -1,6 +1,6 @@
 # TestifySec
 
-TestifySec is a supply chain security company that has created two open source projects that leverage `in-toto`. 
+[TestifySec](https://www.testifysec.com) is a software supply chain security company that has created two open source projects that leverage `in-toto`. 
 
 ## Witness
 [Witness](https://github.com/testifysec/witness/#key-features) contains partial implementation of the in-toto specification including ITE-5, ITE-6, and ITE-7, and an embedded rego policy engine for building policy enforcement (which will align with ITE-10 in the future).
