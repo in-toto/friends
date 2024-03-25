@@ -2,6 +2,7 @@ name: Generate top dependents report
 on:
   schedule:
     - cron: '0 14 * * 1'
+  workflow_dispatch:
 jobs:
   create-dependents-report:
     runs-on: ubuntu-latest
