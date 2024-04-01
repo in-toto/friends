@@ -2,6 +2,7 @@ name: Generate top dependents report
 on:
   schedule:
     - cron: '0 14 * * 1'
+  workflow_dispatch:
 jobs:
   create-dependents-report:
     runs-on: ubuntu-latest
@@ -21,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create PR
-        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Regenerate dependents report
           title: Regenerate dependents report
