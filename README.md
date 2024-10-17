@@ -21,6 +21,7 @@ This section lists software systems, services, or platforms that integrate with 
 
 | Integration Name | Logo | Description |
 |------------------|------|-------------|
+| GitHub           | <img src="img/Integrations_logo/GitHub_logo.png" width="50" height="50">| GitHub is a developer platform popular across enterprises and open source. GitHub artifact attestations supports SLSA build provenance and SBOM in-toto predicate types. |
 | GitLab           | <img src="img/Integrations_logo/Gitlab_logo.png" width="50" height="50">| GitLab is a popular Git server that also provides CI/CD integrations. |
 | Grafeas          |<img src="img/Integrations_logo/Grafeas_logo.png" width="50" height="50">| Grafeas is an open source metadata API that is used to store metadata relevant to software supply chains. Grafeas includes support for in-toto link metadata. |
 | GUAC             |<img src="img/Integrations_logo/Guac_logo.png" width="50" height="50">| GUAC has the ability to ingest and parse SLSA and other in-toto ITE6 attestations (either wrapped in DSSE or standalone). |
