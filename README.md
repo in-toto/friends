@@ -22,6 +22,7 @@ This section lists software systems, services, or platforms that integrate with 
 
 | Integration Name | Logo | Description |
 |------------------|------|-------------|
+| Conforma         | <img src="img/Integrations_logo/Conforma_logo.png" width="50" height="50">| Conforma is a policy engine that leverages in-toto attestations to securely verify software supply chain artifacts. It uses these attestations, which are cryptographic records of a build process, to enforce compliance with security policies. |
 | GitHub           | <img src="img/Integrations_logo/GitHub_logo.png" width="50" height="50">| GitHub is a developer platform popular across enterprises and open source. GitHub artifact attestations supports SLSA build provenance and SBOM in-toto predicate types. |
 | GitLab           | <img src="img/Integrations_logo/Gitlab_logo.png" width="50" height="50">| GitLab is a popular Git server that also provides CI/CD integrations. |
 | Grafeas          |<img src="img/Integrations_logo/Grafeas_logo.png" width="50" height="50">| Grafeas is an open source metadata API that is used to store metadata relevant to software supply chains. Grafeas includes support for in-toto link metadata. |
