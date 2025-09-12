@@ -1,0 +1,5 @@
+JFrog Artifactory leverages a secure evidence‑management mechanism: using the JFrog CLI, users can attach cryptographically signed evidence files—containing metadata like test results, scans, or approvals—to artifacts, packages, builds, or Release Bundles. These evidence files are stored directly alongside the subject in Artifactory, automatically named, and structured into Evidence Predicate, Evidence Payload, and Evidence Envelope layers to support tamper‑evident provenance and auditability.
+
+In addition, Artifactory creates internal evidence associated with [Release Lifecycle Management](https://jfrog.com/help/r/TFrtp_Jcpcw1vmlHZ63Gmw/sR3bhjas8cMCjjN7OhfJvQ) operations, such as Release Bundle v2 [promotion](https://jfrog.com/help/r/TFrtp_Jcpcw1vmlHZ63Gmw/jeEaCKfkjVj14b429xjgzg) and [distribution](https://jfrog.com/help/r/TFrtp_Jcpcw1vmlHZ63Gmw/HUHhGUVqRv2fVs87_lDgyA). When integrated with JFrog Xray, each Release Bundle v2 promotion results in the creation of additional evidence, such as scan results and an SBOM.
+References
+https://jfrog.com/help/r/jfrog-artifactory-documentation/understanding-evidence-files
