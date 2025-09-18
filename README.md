@@ -13,6 +13,7 @@ This section lists organizations or individuals who have adopted the project and
 | Datadog         |<img src="img/Adopters_logo/Datadog_logo.png" width="50" height="50">|Datadog uses in-toto to secure its agent integrations as they move through the company's CI/CD system. |
 | Lockheed Martin ||Lockheed Martin is one of the world's largest aerospace and defense companies, primarily known for manufacturing military aircraft like the F-35 Lightning II and F-22 Raptor fighter jets. |
 | OpenVEX         |<img src="img/Adopters_logo/OpenVEX_logo.png" width="50" height="50">|OpenVEX documents are designed to be self-sustaining, but the specification is designed to benefit from the in-toto attestation format completing VEX statements with data outside of the OpenVEX predicate. |
+| Palantir        | | Palantir uses in-toto to protect software integrity at enterprise scale with signed attestations, multi-ecosystem build support, offline-capable distribution, and layered verification. |
 | SLSA            |<img src="img/Adopters_logo/SLSA_logo.svg" width="50" height="50">|Supply chain Levels for Software Artifacts, or SLSA, is a framework that provides a series of requirements and controls. |
 | SolarWinds      |<img src="img/Adopters_logo/Solarwinds_Logo.png" width="50" height="50">|SolarWinds is an American company that provides information technology services and software to other companies and government agencies. |
 
