@@ -37,6 +37,53 @@ This section lists software systems, services, or platforms that integrate with 
 | Tekton Chains    | <img src="img/Integrations_logo/Tekton_logo.png" width="50" height="50">| Tekton Chains is a component for Tekton that adds software supply chain security. Chains observes all "TaskRuns" or jobs that are executed, and generates an in-toto attestation. |
 | TestifySec       |<img src="img/Integrations_logo/Testifysec_logo.svg" width="50" height="50">| TestifySec is a software supply chain security company that has created two open source projects that leverage in-toto. Witness and Archivista. |
 
+## Project Producers
+This section lists how producers of attestations record and store attestations. This information is useful for consumers of in-toto attestations to find attestations for subsequent use. Additionally, producers of in-toto attestations can use the list to follow common patterns for storing new attestations. Each project is classified by the following schema.
+
+### Classification
+
+Each storage source is classified by the following categories:
+
+- *Type Storage:* If the storage location is a:
+    - Repository
+    - Image
+    - Package registry
+    - Database
+    - Aggregators
+- *Besides Artifact:* If the attestations are stored alongside the artifact they attest to or are stored elsewhere. 
+- *Format Storing:* What attestation format is used to store the attestation. Known common formats are the following:
+   - [dsse](https://github.com/secure-systems-lab/dsse) 
+   - [Sigstore Bundle](https://docs.sigstore.dev/about/bundle/)
+   - [Cosign Bundle](https://github.com/sigstore/cosign/blob/main/specs/BUNDLE_SPEC.md)
+   - [Attestation Bundle](https://github.com/in-toto/attestation/blob/main/spec/v1/bundle.md)
+   - Rows in an SQL table.
+- *Visibility:* If the data storage mechanism data allows to store public or private attestations.
+
+### Summary
+
+| Location | Alongside artifact? | Storage Format | Visibility |
+|----------|---------------------|--------|-----------|
+| Repository-Git Commits | True | Any (Suggested [Attestation Bundle](https://github.com/in-toto/attestation/blob/main/spec/v1/bundle.md)) | Public, Private |
+| Repository-Git Repository | False | Any | Public, Private |
+| Repository-Immutable Releases | True | [Sigstore Bundle](https://docs.sigstore.dev/about/bundle/) | Public, Private |
+| Repository-Linked Artifact | True | Any | Public, Private |
+| Repository-Release Files | True | Any | Public, Private |
+| Images-Attestation Manifest | Either | [Attestation Blob](https://github.com/moby/buildkit/blob/master/docs/attestations/attestation-storage.md#attestation-blob) | Public, Private |
+| Images-Manifest Referrers | Either | Any | Public, Private |
+| Package-Registry-Homebrew | Planned | Planned | Public |
+| Package-Registry-Maven | Planned | Planned | Public |
+| Package-Registry-npm | True | [Sigstore Bundle](https://docs.sigstore.dev/about/bundle/) | Public |
+| Package-Registry-crates.io | Planned | Planned | Public |
+| Package-Registry-NuGet | Planned | Planned | Public |
+| Package-Registry-PyPI | True | [Sigstore Bundle](https://docs.sigstore.dev/about/bundle/) | Public |
+| Package-Registry-Ruby | Unsure | Unsure | Public |
+| Database-Artifact Attestations | False | [Sigstore Bundle](https://docs.sigstore.dev/about/bundle/) | Public, Private |
+| Database-Archivista | False | [dsse](https://github.com/secure-systems-lab/dsse) | Private |
+| Database-OSS Rebuild | False | [dsse](https://github.com/secure-systems-lab/dsse) | Public |
+| Database-Sigstore Rekor | False | [dsse](https://github.com/secure-systems-lab/dsse), [intoto](https://github.com/sigstore/rekor/blob/main/pkg/types/intoto/README.mdn), [hashedrekord](https://github.com/sigstore/rekor/blob/main/pkg/types/hashedrekord/v0.0.1/hashedrekord_v0_0_1_schema.json) | Public, Private |
+| Aggregator-BigQuery | False | Rows | Public |
+| Aggregator-deps.dev | True | References | Public |
+| Aggregator-ecosyste.ms | Planned | Planned | Public |
 
 ## Credit
 
