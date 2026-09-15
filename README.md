@@ -23,6 +23,7 @@ This section lists software systems, services, or platforms that integrate with 
 
 | Integration Name | Logo | Description |
 |------------------|------|-------------|
+| [Agent Evidence Vectors](agent-evidence-vectors/README.md) || agent-evidence-vectors is a conformance vector suite and reference verifier for evidence about what an automated agent did at run time. Eight corpora and 461 vectors are judged by one Go verifier, covering the adversarial-execution-evidence and ai-agent-action predicates proposed in in-toto/attestation#570 and #588, plus an IETF SCITT/COSE carriage profile for those Statements. |
 | Conforma         | <img src="img/Integrations_logo/Conforma_logo.png" width="50" height="50">| Conforma is a policy engine that leverages in-toto attestations to securely verify software supply chain artifacts. It uses these attestations, which are cryptographic records of a build process, to enforce compliance with security policies. |
 | GitHub           | <img src="img/Integrations_logo/GitHub_logo.png" width="50" height="50">| GitHub is a developer platform popular across enterprises and open source. GitHub artifact attestations supports SLSA build provenance and SBOM in-toto predicate types. |
 | GitLab           | <img src="img/Integrations_logo/Gitlab_logo.png" width="50" height="50">| GitLab is a popular Git server that also provides CI/CD integrations. |
