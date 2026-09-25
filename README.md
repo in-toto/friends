@@ -23,6 +23,7 @@ This section lists software systems, services, or platforms that integrate with 
 
 | Integration Name | Logo | Description |
 |------------------|------|-------------|
+| [agent-change-control](agent-change-control/README.md) |<img src="img/Integrations_logo/agent-change-control_logo.png" width="50" height="50">| agent-change-control (`acc`) enforces the four-eyes principle for changes written with coding agents: it records the agent, its human operator, the reviewers and the merger, and emits the deterministic verdict as an in-toto Statement whose subject is the commit and whose predicate re-validates offline. It reads signed authorship and review attestations back as evidence. |
 | Conforma         | <img src="img/Integrations_logo/Conforma_logo.png" width="50" height="50">| Conforma is a policy engine that leverages in-toto attestations to securely verify software supply chain artifacts. It uses these attestations, which are cryptographic records of a build process, to enforce compliance with security policies. |
 | GitHub           | <img src="img/Integrations_logo/GitHub_logo.png" width="50" height="50">| GitHub is a developer platform popular across enterprises and open source. GitHub artifact attestations supports SLSA build provenance and SBOM in-toto predicate types. |
 | GitLab           | <img src="img/Integrations_logo/Gitlab_logo.png" width="50" height="50">| GitLab is a popular Git server that also provides CI/CD integrations. |
